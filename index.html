@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Happiness Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        /* Add basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('light-greem-backgrounds.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        #visualization {
+            width: 100%;
+            height: 600px;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 6px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+        .bar {
+            fill: steelblue;
+        }
+        .bar:hover {
+            fill: orange;
+        }
+        .axis-label {
+            font-size: 14px;
+        }
+        .line-chart {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>World Happiness Visualization</h1>
+    <div id="visualization"></div>
+    <div id="line-charts">
+        <div id="happiness-score-chart" class="line-chart"></div>
+        <div id="happiness-rank-chart" class="line-chart"></div>
+        <div id="gdp-per-capita-chart" class="line-chart"></div>
+        <div id="life-expectancy-chart" class="line-chart"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
